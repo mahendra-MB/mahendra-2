@@ -18,10 +18,15 @@ for i in range(100):
 
 
 for i in range(100):
-    if i%3==0:
+    if i % 9 == 0:  # Check highest multiple first
+        print(f"{i} divided by 9")
+    elif i % 6 == 0:
+        print(f"{i} divided by 6")
+    elif i % 3 == 0:
         print(f"{i} divided by 3")
-    elif i%6==0:
-        print(f"{i} divided by 5")
-    elif i%9==0:
-        print(f"{i} divided by 7")
+    else:
+        print(f"{i} is others")
+
+
+
 
