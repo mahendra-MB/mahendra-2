@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Book Your Tour</title>
+    <style>
+
+        body {
+            text-align: center;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #1e3c72, #2a5298);
+            color: white;
+            margin-top: 50px;
+        }
+        .container {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 100px;
+            border-radius: 10px;
+            width: 50%;
+            margin: auto;
+        }
+        h1 {
+            font-size: 28px;
+        }
+        .form-group {
+            margin: 15px 0;
+            text-align: left;
+        }
+        label {
+            font-size: 18px;
+            display: block;
+        }
+        input {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            font-size: 16px;
+            border-radius: 5px;
+            border: none;
+        }
+        .book-btn {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 12px 25px;
+            background: linear-gradient(to right, #4CAF50, #66bb6a);
+            color: white;
+            font-size: 18px;
+            font-weight: bold;
+            border-radius: 8px;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+        .book-btn:hover {
+            background: linear-gradient(to right, #66bb6a, #4CAF50);
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Booking Tour for {{ country }}</h1>
+
+    <div class="container">
+        <form action="{% url 'payment_page' country %}" method="POST">
+            {% csrf_token %}
+            <div class="form-group">
+                <label>Full Name:</label>
+                <input type="text" name="full_name" required>
+            </div>
+            <div class="form-group">
+                <label>Email:</label>
+                <input type="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label>Phone Number:</label>
+                <input type="text" name="phone" required>
+            </div>
+            <div class="form-group">
+                <label>Number of Travelers:</label>
+                <input type="number" name="travelers" required>
+            </div>
+            <button type="submit" class="book-btn">Proceed to Payment</button>
+        </form>
+    </div>
+
+</body>
+</html>

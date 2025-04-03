@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Payment Successful</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #1e9600, #4CAF50);
+            color: white;
+            margin-top: 50px;
+        }
+        .container {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 30px;
+            border-radius: 10px;
+            width: 50%;
+            margin: auto;
+        }
+        h1 {
+            font-size: 32px;
+        }
+        p {
+            font-size: 20px;
+        }
+        .home-btn {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 12px 25px;
+            background: #ffffff;
+            color: #1e9600;
+            font-size: 18px;
+            font-weight: bold;
+            border-radius: 8px;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+        .home-btn:hover {
+            background: #f1f1f1;
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Payment Successful!</h1>
+    <div class="container">
+        <p>Thank you for booking your trip to <b>{{ country }}</b>.</p>
+        <a href="{% url 'destinations' %}" class="home-btn">Back to Home</a>
+    </div>
+
+</body>
+</html>
+
+

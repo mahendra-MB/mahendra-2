@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Welcome to Tours</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial, sans-serif;
+            margin-top: 150px;
+        }
+        h1 {
+            font-size: 100px;
+            margin-bottom: 90px;
+        }
+        button {
+            font-size: 32px;
+            padding: 20px 60px;
+            margin: 40px;
+            cursor: pointer;
+            border: none;
+            background-color: blue;
+            color: white;
+            border-radius: 10px;
+        }
+        a {
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome to Tours</h1>
+
+    <!-- Register Button -->
+    <a href="{% url 'register' %}">
+        <button>Register</button>
+    </a>
+
+    <!-- Login Button -->
+    <a href="{% url 'login' %}">
+        <button>Login</button>
+    </a>
+
+</body>
+</html>
